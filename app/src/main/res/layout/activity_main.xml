@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:id="@+id/main"
+        android:layout_weight="1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp">
+
+
+    </LinearLayout>
+
+    <ImageView
+        android:background="#cccccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
+    <include layout="@layout/customer_bottom"/>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <include layout="@layout/header_shangping"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/lk"
+        android:background="#f8f8f8"
+
+
+
+        android:layout_width="match_parent"
+        android:layout_height="40dp"/>
+
+    <ImageView
+        android:background="#eaeaea"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"/>
+    <FrameLayout
+        android:background="#ffffff"
+        android:id="@+id/main"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

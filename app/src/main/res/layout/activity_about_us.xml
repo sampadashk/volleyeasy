@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        style="@style/header"
+        >
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/back"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+
+                android:paddingLeft="1dp"
+                android:clickable="true"
+                android:src="@drawable/xiangzuo"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:text="@string/myInfo"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15dp"
+            style="@style/text_title"
+            android:layout_gravity="center"
+            android:id="@+id/name"
+            android:text="@string/guanyuwomen"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="12dp" />
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="30dp"
+
+
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"/>
+
+
+    </LinearLayout>
+    <FrameLayout
+        android:background="#ffffff"
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+</LinearLayout>

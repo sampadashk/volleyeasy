@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="#ffffff"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/id_num"
+        android:text="1"
+        android:layout_marginLeft="10dp"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:textColor="#000" />
+
+    <TextView
+        android:layout_marginLeft="25dp"
+        android:textSize="13dp"
+        android:id="@+id/name"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:text="@string/shangping"
+        android:textStyle="bold"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@drawable/delete"
+        android:clickable="true"
+        android:id="@+id/delete"
+        android:layout_toRightOf="@id/name"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_width="15dp"
+        android:layout_height="15dp" />
+
+    <TextView
+        android:textSize="13dp"
+        android:layout_toRightOf="@id/delete"
+        android:text="@string/danjia"
+        android:layout_centerVertical="true"
+        android:id="@+id/danjia"
+        android:layout_marginLeft="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="13dp"
+        android:layout_toRightOf="@id/danjia"
+        android:text="/"
+        android:layout_centerVertical="true"
+        android:id="@+id/asd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textSize="13dp"
+        android:layout_toRightOf="@id/asd"
+        android:text="@string/danjia"
+        android:layout_centerVertical="true"
+        android:id="@+id/unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:src="@drawable/jianhao"
+        android:id="@+id/reduce"
+        android:layout_toRightOf="@id/delete"
+        android:clickable="true"
+        android:layout_marginLeft="75dp"
+        android:layout_centerVertical="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+    <EditText
+        android:id="@+id/shuliang"
+        android:textSize="13dp"
+        android:text="@string/shuliang"
+        android:inputType="numberDecimal"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/reduce"
+        />
+
+
+    <ImageView
+        android:src="@drawable/jiahao"
+        android:clickable="true"
+        android:layout_toRightOf="@id/shuliang"
+        android:id="@+id/add"
+        android:layout_centerVertical="true"
+
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+
+
+
+    <TextView
+
+        android:textSize="13dp"
+        android:id="@+id/jiage"
+        android:text="@string/jiage"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+
+        />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
+

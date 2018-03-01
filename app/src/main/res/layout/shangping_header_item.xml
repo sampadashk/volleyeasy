@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="40dp"
+
+
+
+    >
+
+    <TextView
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:id="@+id/id_tv"
+        android:textSize="13sp"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        style="@style/header"
+        >
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/back"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+
+                android:paddingLeft="1dp"
+                android:clickable="true"
+                android:src="@drawable/xiangzuo"
+                android:layout_width="25dp"
+                android:layout_height="25dp" />
+            <TextView
+                android:textColor="#ffffff"
+                android:layout_width="wrap_content"
+                android:text="@string/myInfo"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="15dp"
+            style="@style/text_title"
+            android:layout_gravity="center"
+            android:text="@string/fankui"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="28dp"
+            android:layout_height="12dp" />
+        <TextView
+            android:textColor="#ffffff"
+            android:layout_width="30dp"
+
+
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"/>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:background="@drawable/login_button_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/scoreToUs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="@string/scoretome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/xiangyou_grey"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+    </RelativeLayout>
+    <ImageView
+        android:background="#eaeaea"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+    <RelativeLayout
+        android:background="@drawable/login_button_selector"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:id="@+id/sendMsgToUs"
+        android:paddingLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="@string/sendscore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <ImageView
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/xiangyou_grey"
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+    </RelativeLayout>
+</LinearLayout>

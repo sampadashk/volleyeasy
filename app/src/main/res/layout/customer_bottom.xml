@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+
+    android:background="#f8f8f8"
+    android:layout_height="55dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/mTab_shangping"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/shangping_Img"
+                android:paddingTop="8dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/shangping"
+                android:background="#00000000"
+                />
+
+            <TextView
+                android:id="@+id/one"
+                android:textSize="12sp"
+                android:text="@string/shangping"
+                android:textColor="#666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:id="@+id/cart_tab"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/mTab_cart"
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:paddingTop="8dp"
+
+                android:id="@+id/cart_Img"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/cart"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/two"
+                android:textSize="12sp"
+                android:text="@string/cart"
+                android:textColor="#666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:id="@+id/scj"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:id="@+id/mTab_collect"
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/collect_Img"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/scj"
+                android:background="#00000000" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/mTab_dingdan"
+            android:orientation="vertical"
+
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/dingdan_Img"
+                android:paddingTop="8dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/dingdan"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/three"
+                android:textSize="12sp"
+                android:text="@string/dingdan"
+                android:textColor="#666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="match_parent">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/mTab_wode"
+            android:orientation="vertical"
+
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/wode_Img"
+                android:paddingTop="8dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:src="@drawable/my_info"
+                android:background="#00000000" />
+
+            <TextView
+                android:id="@+id/four"
+                android:textSize="12sp"
+                android:text="@string/wode"
+                android:textColor="#666666"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

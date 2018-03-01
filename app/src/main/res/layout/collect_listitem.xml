@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/main"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/login_button_selector"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_centerVertical="true"
+            android:id="@+id/id_num"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="7dp"/>
+        <TextView
+            android:layout_centerVertical="true"
+            android:textColor="#000000"
+            android:id="@+id/name"
+            android:textSize="14sp"
+
+
+            android:layout_marginLeft="30dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_toRightOf="@id/name"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:text="@string/shanchu"
+            android:background="@drawable/roundedelete"
+            android:textColor="#ffffff"
+            android:layout_width="30dp"
+            android:id="@+id/delete"
+            android:layout_height="15dp" />
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/unitprice"
+                android:textSize="14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/fuhao"
+                android:text="/"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="14sp"
+                android:id="@+id/unit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/add"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:descendantFocusability="afterDescendants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:src="@drawable/jiahao"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <EditText
+            android:layout_centerVertical="true"
+            android:id="@+id/num"
+            android:textSize="15dp"
+            android:layout_toLeftOf="@id/add"
+            android:layout_gravity="center_vertical"
+            android:singleLine="true"
+            android:gravity="center"
+            android:inputType="numberDecimal"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:id="@+id/reduce"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="5dp"
+            android:gravity="center"
+            android:descendantFocusability="afterDescendants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/num">
+            <ImageView
+                android:src="@drawable/jianhao"
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <TextView
+            android:text="@string/noPrice"
+            android:textSize="11sp"
+            android:layout_marginRight="5dp"
+            android:layout_alignParentRight="true"
+            android:maxLength="30"
+            android:ellipsize="end"
+            android:id="@+id/noPrice"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</RelativeLayout>

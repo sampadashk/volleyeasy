@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/header"
+    >
+
+    <ImageView
+        android:id="@+id/search_back"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:paddingLeft="2dp"
+
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:clickable="true"
+        android:src="@drawable/xiangzuo"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="@string/shangping"
+        android:textColor="#ffffff"
+        android:textSize="15sp"
+
+        android:layout_height="wrap_content" />
+
+
+    <EditText
+        android:layout_marginLeft="10dp"
+        android:id="@+id/search_edit"
+        android:layout_weight="1"
+        android:hint="@string/search_edit_text"
+        android:paddingLeft="5dp"
+        android:layout_gravity="center"
+        android:background="@drawable/rounded"
+
+        android:textSize="14sp"
+        android:layout_width="0dp"
+        android:layout_height="28dp"
+        android:layout_marginRight="10dp"/>
+    <!--<LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/btn_onclick"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"></LinearLayout>-->
+
+
+</LinearLayout>

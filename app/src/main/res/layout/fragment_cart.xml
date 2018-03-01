@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/header_cart"
+        android:id="@+id/cart_header"/>
+    <RelativeLayout
+        android:id="@+id/cart_exit"
+        android:layout_below="@id/cart_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lk"
+            android:background="#f8f8f8"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+        <ImageView
+            android:id="@+id/imgHeader"
+            android:layout_below="@id/lk"
+            android:background="#eaeaea"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"/>
+        <RelativeLayout
+            android:id="@+id/Re_four"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:background="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:paddingLeft="15dp"
+                android:id="@+id/one"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:text="@string/zongjiaguji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:text="$ "
+                android:id="@+id/two"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#ee2400"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@id/one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:text="198"
+                android:textColor="#ee2400"
+                android:id="@+id/total_price"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:textSize="15dp"
+                android:id="@+id/submit"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:background="@drawable/roundsubmit"
+                android:text="@string/querendingdan"
+                android:textStyle="bold"
+                android:layout_width="80dp"
+                android:layout_height="25dp" />
+
+        </RelativeLayout>
+        <ImageView
+            android:id="@+id/img"
+            android:layout_above="@id/Re_four"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#eaeaea"/>
+
+        <ListView
+            android:layout_below="@id/imgHeader"
+            android:id="@+id/lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/img">
+
+        </ListView>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_below="@id/cart_header"
+        android:id="@+id/cart_none"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:src="@drawable/cart_none"
+            android:layout_gravity="center"
+            android:layout_marginTop="100dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_marginTop="30dp"
+            android:text="@string/cartLonely"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="@string/hostSelect"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="Go Home"
+            android:layout_marginTop="30dp"
+            android:textColor="#000000"
+            android:id="@+id/GoToProduct"
+            android:clickable="true"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+</RelativeLayout>

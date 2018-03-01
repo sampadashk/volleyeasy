@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/header"
+    >
+    <LinearLayout
+        android:id="@+id/back"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:paddingLeft="5dp"
+            android:clickable="true"
+            android:src="@drawable/xiangzuo"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+
+        <TextView
+            android:text="@string/cart"
+            android:paddingLeft="2dp"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <TextView
+
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+
+        style="@style/text_title"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="@string/beizhu_title"
+        android:textColor="#ffffff" />
+
+
+    <TextView
+        android:layout_width="93dp"
+
+        android:layout_height="wrap_content" />
+
+
+
+
+
+</LinearLayout>
