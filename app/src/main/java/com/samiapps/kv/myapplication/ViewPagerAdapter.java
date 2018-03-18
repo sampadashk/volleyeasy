@@ -23,7 +23,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         return listViews.size();
     }
     @Override
-    public Object instantiateItem(View container, int position) {
+    public Object instantiateItem(ViewGroup container, int position) {
         System.out.println("第几个pager=="+position);
         try {
             if(listViews.get(position).getParent()==null)
@@ -38,7 +38,7 @@ public class ViewPagerAdapter extends PagerAdapter {
         return listViews.get(position);
     }
     @Override
-    public void destroyItem(View container, int position, Object object) {
+    public void destroyItem(ViewGroup container, int position, Object object) {
         ((ViewPager)container).removeView((View)object);
     }
 

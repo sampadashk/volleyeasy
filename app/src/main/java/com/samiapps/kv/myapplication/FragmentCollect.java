@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -138,7 +139,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         listViews=new ArrayList<ViewGroup>();
         mAdapter=new ViewPagerAdapter(listViews);
         viewPager.setAdapter(mAdapter);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -146,6 +147,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
 
             public void onPageSelected(int position) {
                 lk.smoothScrollToPosition(position);
+                Log.d("checkpos",""+position);
                 Adapter.setPosition(position);
                 mNomore = false;
                 mPage = 1;
@@ -251,6 +253,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
             @Override
             public void onResponse(String response) {
                 dialog.dismiss();
+                Log.d("contracts",response);
                 parseContractList(response);
                 if (data.size() > 0) {
                     supplierId = data.get(0)._supplier;
@@ -284,7 +287,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         JsonFactory jsonFactory = new JsonFactory();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            JsonParser jsonParser = jsonFactory.createJsonParser(json);
+            JsonParser jsonParser = jsonFactory.createParser(json);
             ContractList contractList = (ContractList) objectMapper.readValue(jsonParser, ContractList.class);
             this.data.clear();
             this.data.addAll(contractList.contracts);
@@ -416,17 +419,20 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         params.put("itemsPerPage", mItemsPerPage);
         params.put("_supplier",supplierId);
         */
-        String url=Constants.collectedStr+"?"+"_supplier"+"="+supplierId+"&"+"itemsPerPage"+"="+mItemsPerPage;
+        String url=Constants.collectedStr+"?"+"_supplier"+"="+supplierId+"&"+"itemsPerPage"+"="+mItemsPerPage+"page"+"="+mPage;
         Utf8JsonRequest utf8JsonRequest=new Utf8JsonRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
+                Log.d("checks",response);
                 parseShoucangList(response);
+
                 ((SwipeRefreshLayout)listViews.get(states).findViewById(R.id.swiperefresh)).setRefreshing(false);
 
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                ((SwipeRefreshLayout)listViews.get(states).findViewById(R.id.swiperefresh)).setRefreshing(false);
 
             }
         })
@@ -449,7 +455,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         JsonFactory jsonFactory = new JsonFactory();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            JsonParser jsonParser = jsonFactory.createJsonParser(json);
+            JsonParser jsonParser = jsonFactory.createParser(json);
             ProductList productList = (ProductList) objectMapper.readValue(jsonParser,ProductList.class);
             shangpingList.clear();
             shangpingList.addAll(productList.products);
@@ -463,9 +469,11 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
                     }
                 }
             }
+
             // setTotal_price();
             this.MiTems.get(states).clear();
             this.MiTems.get(states).addAll(productList.products);
+            Log.d("checkmitem",MiTems.get(states).size()+"");
             adapters.get(states).notifyDataSetChanged();
         } catch (IOException e) {
             e.printStackTrace();
@@ -476,7 +484,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         mPage = mPage + 1;
         //TODO add param mPage
 
-        String url=Constants.collectedStr+"?"+"_supplier"+"="+supplierId+"&"+"itemsPerPage"+"="+mItemsPerPage;
+        String url=Constants.collectedStr+"?"+"_supplier"+"="+supplierId+"&"+"itemsPerPage"+"="+mItemsPerPage+"page"+"="+mPage;
         Utf8JsonRequest utf8JsonRequest=new Utf8JsonRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
@@ -487,6 +495,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                ((SwipeRefreshLayout)listViews.get(states).findViewById(R.id.swiperefresh)).setRefreshing(false);
 
             }
         })
@@ -510,7 +519,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
         JsonFactory jsonFactory = new JsonFactory();
         ObjectMapper objectMapper = new ObjectMapper();
         try {
-            JsonParser jsonParser = jsonFactory.createJsonParser(json);
+            JsonParser jsonParser = jsonFactory.createParser(json);
             ProductList productList = (ProductList) objectMapper.readValue(jsonParser,ProductList.class);
             if(productList.products.size()<mItemsPerPage){
                 mNomore = true;
@@ -527,6 +536,7 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
             }
             //setTotal_price();
             this.MiTems.get(states).addAll(productList.products);
+            Log.d("checkmoremitem",MiTems.get(states).size()+"");
             adapters.get(states).notifyDataSetChanged();
         } catch (IOException e) {
             e.printStackTrace();
@@ -610,7 +620,8 @@ public class FragmentCollect extends Fragment implements SwipeRefreshLayout.OnRe
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
         if((ListView) listViews.get(states).findViewById(R.id.lv)!=null) {
             if (!mNomore && ((ListView) listViews.get(states).findViewById(R.id.lv)).getCount() != 0 && ((ListView) listViews.get(states).findViewById(R.id.lv)).getLastVisiblePosition() >= (((ListView) listViews.get(states).findViewById(R.id.lv)).getCount() - 2)) {
-                loadMoreProductList();
+              //TODO uncomment
+                //  loadMoreProductList();
             }
         }
     }
